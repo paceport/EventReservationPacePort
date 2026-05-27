@@ -1,0 +1,23 @@
+.grid-item {
+    width: 250px;
+    border-radius: 12px;
+}
+
+.grid{
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    gap: 15px;
+    /* width: 100%; */
+    padding-top: 20px;
+    flex-direction: row;
+    overflow-x: auto;
+    
+
+}
+.card-link {
+    background-color: white;
+    color: #4E84C4;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }

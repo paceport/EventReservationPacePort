@@ -1,0 +1,31 @@
+[
+    {
+        "event_type" : "Meeting",
+        "Id":"#M12345678",
+        "name": "UI/UX Design Workshop",
+        "location": "Design Thinking room",
+        "date": "6/21/2024", 
+        "start_time": "1000",
+        "end_time": "1200"
+    },
+    {
+        "event_type" : "Meeting",
+        "Id":"#M12345678",
+        "name": "UI/UX Design Workshop",
+        "location": "Design Thinking room",
+        "date": "6/21/2024", 
+        "start_time": "1000",
+        "end_time": "1200"
+    },
+    {
+        "event_type" : "Meeting",
+        "Id":"#M12345678",
+        "name": "UI/UX Design Workshop",
+        "location": "Design Thinking room",
+        "date": "6/21/2024", 
+        "start_time": "1000",
+        "end_time": "1200"
+    }
+    
+    
+]

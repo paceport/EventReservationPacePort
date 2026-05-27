@@ -1,0 +1,73 @@
+/* 
+
+.grid{
+   display: flex;
+
+}
+
+.grid-list{
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minimax(300px, 2fr));
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+
+}
+
+.grid-item {
+    flex: 0 0 auto;
+    display: flex;
+    width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 2px 2px 0px 0px #00000029;
+}
+
+.edit-button {
+    font: normal normal bold 20px/24px Calibri;
+    letter-spacing: 0.28px;
+    color: #4E84C4;
+    opacity: 1;
+}
+
+.main {
+    margin: 20px;
+    width: 100%;
+}
+
+.card-link {
+  background-color: white;
+  color: #4E84C4;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+} */
+
+.grid {
+  display: flex;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minimax(250px, 2fr));
+  gap: 15px;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.grid::-webkit-scrollbar {
+  display: none;
+}
+
+.grid-item {
+  flex: 0 0 auto;
+  display: flex;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 2px 2px 0px 0px #00000029;
+}
+
+.edit-button {
+  letter-spacing: 0.28px;
+  color: #4e84c4;
+  opacity: 1;
+}

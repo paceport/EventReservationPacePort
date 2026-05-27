@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36.506 39.478">
+  <g id="Bell" transform="translate(1.256 1.25)" hover = "black">
+  
+    <path id="bell-2" data-name="bell" d="M372.877,136h1.739c7.164,0,12.237,5.906,12.237,13.1v9.753l3.735,6.366a1.194,1.194,0,0,1-1.029,1.8H357.945a1.192,1.192,0,0,1-1.027-1.8l3.728-6.309V149C360.646,141.809,365.715,136,372.877,136Zm-5.094,32.207h11.929c0,2.633-2.67,4.771-5.964,4.771S367.783,170.84,367.783,168.208Z" transform="translate(-356.752 -136.001)" fill="none" stroke="#fff" stroke-width="2.5" fill-rule="evenodd"/>
+  </g>
+</svg>

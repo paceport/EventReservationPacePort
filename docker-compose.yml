@@ -1,0 +1,70 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: playlist-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: playlist_user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: playlist_v2
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  playlist-main-backend:
+    build:
+      context: ./playlistMainBackend-main
+      dockerfile: Dockerfile
+    container_name: playlist-main-backend
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./playlistMainBackend-main/.env
+    depends_on:
+      - postgres
+
+  playlist-main-frontend:
+    build:
+      context: ./playlistMainFrontend-main
+      dockerfile: Dockerfile
+    container_name: playlist-main-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./playlistMainFrontend-main/.env
+    depends_on:
+      - playlist-main-backend
+
+  playlist-session-main:
+    build:
+      context: ./playlist-main
+      dockerfile: Dockerfile
+    container_name: playlist-session-main
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./playlist-main/.env
+    volumes:
+      - ./playlist-main/uploads:/app/uploads
+    depends_on:
+      - postgres
+
+  playlist-session-frontend:
+    build:
+      context: ./playlist-frontend-main
+      dockerfile: Dockerfile
+    container_name: playlist-session-frontend
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./playlist-frontend-main/.env
+    depends_on:
+      - playlist-session-main
+
+volumes:
+  postgres_data:

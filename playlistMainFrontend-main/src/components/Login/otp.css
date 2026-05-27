@@ -1,0 +1,99 @@
+/* OTPInput.css */
+.otp-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+  margin: auto;
+}
+.otp-form {
+  background: #1e1e1b 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 20px;
+  opacity: 0.7;
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  width: 320px;
+  height: fit-content;
+  margin-left: 300px;
+  margin-top: 100px;
+  align-self: center;
+  color: white;
+  padding: 30px;
+}
+
+.otp-label {
+  font-size: 0.8rem;
+}
+.otp-input {
+  width: 30px;
+  height: 30px;
+  margin: 5px 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  background: #353530 0% 0% no-repeat padding-box;
+  background: 0% 0% no-repeat padding-box;
+  border: 1px solid #a1a1a1;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+.alert-style {
+  position: absolute;
+  z-index: 1;
+  left: 40%;
+  top: 40%;
+  background: white 0% 0% no-repeat padding-box;
+  border: 1px solid #a1a1a1;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+/* .otp-input:focus {
+  outline: none;
+  border-color: #a1a1a1;
+  box-shadow: 0 0 0 0.2rem #a1a1a1(0, 123, 255, 0.25);
+} */
+.sign-button {
+  background: #4e84c4 0% 0% no-repeat padding-box;
+  width: 280px;
+  border-radius: 25px;
+  padding: 5px;
+  font-size: 0.8rem;
+  letter-spacing: 0.53px;
+  color: #ffffff;
+  opacity: 1;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.clear-Link {
+  font-size: 0.6rem;
+  text-decoration: none;
+  float: right;
+  margin-right: 10px;
+  font-weight: bold;
+  letter-spacing: 0.43px;
+  color: #4088ff;
+  opacity: 1;
+}
+.OTP-span {
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  opacity: 1;
+
+  margin-left: 30px;
+}
+
+.OTP-Link {
+  text-decoration: none;
+  color: #4e84c4;
+}
+
+.otp-message {
+  color: white;
+  margin-top: 10px;
+}

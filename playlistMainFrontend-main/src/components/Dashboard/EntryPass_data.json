@@ -1,0 +1,56 @@
+[
+    {
+        "Type":"Experience_tour",
+        "Title": "Pace Port visit by Big 5 Canada Banking Corp.",
+        "event_type" : "Experience Tour",
+        "location": "TCS PacePort 25th Floor",
+        "date": "Mar 15, 2024", 
+        "start_time": "2pm",
+        "end_time": "3pm"
+    },
+    {
+        "Type":"Workshop",
+        "Title": "Pace Port visit by Big 5 Canada Banking Corp.",
+        "event_type" : "Workshop",
+        "location": "TCS PacePort 25th Floor",
+        "date": "Mar 15, 2024", 
+        "start_time": "2pm",
+        "end_time": "3pm"
+    },
+    {
+        "Type":"Event",
+        "Title": "Pace Port visit by Big 5 Canada Banking Corp.",
+        "event_type" : "Event",
+        "location": "TCS PacePort 25th Floor",
+        "date": "Mar 15, 2024",
+        "start_time": "2pm",
+        "end_time": "3pm"
+    },
+    {
+        "Type":"Experience_tour",
+        "Title": "Pace Port visit by Big 5 Canada Banking Corp.",
+        "event_type" : "Experience Tour",
+        "location": "TCS PacePort 25th Floor",
+        "date": "Mar 15, 2024", 
+        "start_time": "2pm",
+        "end_time": "3pm"
+    },
+    {
+        "Type":"Workshop",
+        "Title": "Pace Port visit by Big 5 Canada Banking Corp.",
+        "event_type" : "Workshop",
+        "location": "TCS PacePort 25th Floor",
+        "date": "Mar 15, 2024", 
+        "start_time": "2pm",
+        "end_time": "3pm"
+    },
+    {
+        "Type":"Event",
+        "Title": "Pace Port visit by Big 5 Canada Banking Corp.",
+        "event_type" : "Event",
+        "location": "TCS PacePort 25th Floor",
+        "date": "Mar 15, 2024",
+        "start_time": "2pm",
+        "end_time": "3pm"
+    }
+]

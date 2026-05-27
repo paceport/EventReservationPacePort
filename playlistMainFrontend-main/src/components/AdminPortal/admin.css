@@ -1,0 +1,54 @@
+.reservations-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  height: 80px;
+  margin-top: 50px;
+}
+
+.reservations-header h1 {
+  font-size: 24px;
+  letter-spacing: 0.53px;
+  font-weight: bold;
+}
+
+.reservations-header .highlight {
+  color: gold;
+}
+
+.view-toggle {
+  display: flex;
+}
+
+.view-toggle span {
+  margin: 0 10px;
+}
+
+.section-table {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+}
+.admin-table {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 10px;
+  gap: 10px;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}

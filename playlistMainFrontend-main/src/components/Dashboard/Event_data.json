@@ -1,0 +1,50 @@
+[
+    {
+        "event_type" : "Event",
+        "type":"Event",
+        "name": "Fireside chat with CEO",
+        "location": "Board room 01",
+        "date": "07/05/2024", 
+        "start_time": "1000",
+        "end_time": "1200"
+    },
+    {
+        "event_type" : "Workshop",
+        "type":"Workshop",
+        "name": "Design thinking workshop ",
+        "location": "Eastend hall",
+        "date": "12/05/2024", 
+        "start_time": "1200",
+        "end_time": "1600"  
+    },
+    {
+        "event_type" : "Event",
+        "type":"Event",
+        "name": "Townhall with CEO",
+        "location": "Board room 01",
+        "date": "14/05/2024", 
+        "start_time": "1500",
+        "end_time": "1700"
+    },
+    {
+        "event_type" : "Experience Tour",
+        "type":"Experience_tour",
+        "name": "Paceport visit by Bank Inc",
+        "location": "Innovation space",
+        "date": "18/05/2024", 
+        "start_time": "0900",
+        "end_time": "1400"
+    },
+  
+    {
+        "event_type" : "Event",
+        "type": "Event",
+        "name": "Fireside chat with CEO",
+        "location": "Board room",
+        "date": "07/05/2024", 
+        "start_time": "1000",
+        "end_time": "1200"
+    }
+    
+]
+

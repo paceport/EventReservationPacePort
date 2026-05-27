@@ -1,0 +1,26 @@
+.playlist-header-title {
+  margin-left: 1.5rem;
+  font-weight: bolder;
+  font-size: 1rem;
+  color: #7f7f7f;
+  letter-spacing: 0.53px;
+}
+
+.playlist-header-row {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 1.5rem;
+}
+
+.playlist-button {
+  background-color: white;
+  color: #4e84c4;
+  font-weight: 700;
+  letter-spacing: 0.53px;
+}
+
+.playlist-button:hover {
+  background-color: white;
+}

@@ -1,0 +1,88 @@
+.entry-pass-container {
+  
+    padding-top: 5%;
+    width: 100%;
+    
+}
+.section-header {
+  font-size: 20px; 
+  padding: 20px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+.event-card {
+    width: 260px;
+    height: 350px;
+}
+
+.event-type {
+    top: 1406px;
+    left: 198px;
+    width: 187px;
+    height: 26px;
+    /* UI Properties */
+    text-align: left;
+    letter-spacing: 0.3px;
+    color: #000000;
+    opacity: 1;
+}
+
+.event-name {
+    top: 1447px;
+    left: 198px;
+    width: 323px;
+    height: 61px;
+    /* UI Properties */
+    text-align: left;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.event-location {
+    /* Layout Properties */
+    top: 1519px;
+    left: 232px;
+    width: 215px;
+    height: 27px;
+    /* UI Properties */
+    text-align: left;
+    letter-spacing: -0.01px;
+    color: #000000;
+}
+
+.header {
+    text-align: left;
+    letter-spacing: 0.31px;
+    color: #000000;
+    opacity: 1;
+}
+
+.event-list {
+    padding-left: 1 rem;
+}
+
+.eventpass-row {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minimax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    position: absolute;
+}
+
+.eventpass-row::-webkit-scrollbar {
+    display: none;
+}
+
+.black-days {
+    position: relative;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: right;
+}

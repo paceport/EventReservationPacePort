@@ -1,0 +1,42 @@
+.header-title {
+  margin-left: 1.5rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.6px;
+}
+.header-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3.5rem;
+  margin-right: 1.5rem;
+}
+
+.header-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.cancel-button {
+  background-color: white;
+  color: #dd5041;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+.cancel-button:hover {
+  background-color: white;
+}
+
+.drafttitle-button {
+  background-color: white;
+  color: #f0b34f;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+.drafttitle-button:hover {
+  background-color: white;
+}

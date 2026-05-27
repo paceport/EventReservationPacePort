@@ -1,0 +1,178 @@
+
+
+.row{
+    padding: 20px 40px 10px 40px;
+    gap: 25px;
+    margin: 0;
+    display: flex;
+    
+}
+
+
+.form-label{
+    font-size: 10px;
+    font-family: "Segoe UI";
+    letter-spacing: 0.43px;
+    font-weight: 500;
+    color: #1E1E1B;
+    opacity: 1;
+    
+}
+
+input.form-control{
+text-align: left;
+font: normal normal 600 10px/24px Segoe UI;
+letter-spacing: 0.43px;
+color: #7F7F7F;
+opacity: 1;
+}
+
+textarea.form-control{
+text-align: left;
+font: normal normal 600 10px/24px Segoe UI;
+letter-spacing: 0.43px;
+color: #7F7F7F;
+opacity: 1;
+}
+
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.label{
+    font-family: "Calibri"; 
+    font-size: 12px;
+    font-weight: bolder;  
+    letter-spacing: 0.5px;
+    margin-left: 30px;
+}
+#overview-card{
+    margin: 20px 30px 20px 30px;
+    border: 1px solid #00000029;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+    align-items: center;
+    background-color: #FFFFFFC2;
+    
+}
+
+.overview-card-header {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    flex: 1;
+      
+}
+
+.overview-label{
+    font-family: "Calibri"; 
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    font-weight: bold;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 12px 0 0 12px;
+}
+
+
+
+option {
+    font: normal normal  12px/24px Segoe UI;
+    letter-spacing: 0.43px;
+    color: #7F7F7F;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+select.form-select{
+    font: normal normal  10px/24px Segoe UI;
+    letter-spacing: 0.43px;
+    color: #7F7F7F;
+    opacity: 1;
+} 
+    
+button.btn {
+background-color: #4E84C4;
+font-size: 12px;
+font-family: "Segoe UI";
+letter-spacing: 0.05px;
+color: #FFFFFF;
+opacity: 1;
+border-radius: 50px;
+
+}
+
+
+.text-muted {
+    float: right;
+    letter-spacing: 0.43px;
+    font-family: "Calibri";
+    opacity: 1;
+}
+
+
+#detail-page{
+    margin: 30px 30px 20px 30px;
+    border: 1px solid #00000029;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+    align-items: center;
+    background-color: #FFFFFFC2;
+}
+
+.dropbox-text{
+    font-size: 10px;
+    font-family: "Segoe UI";
+    letter-spacing: 0.43px;
+    font-weight: 500;
+    color: #1E1E1B;
+    opacity: 1;
+    float: left;
+    width: 100%;
+    margin: 0 0 5px 30px;
+    
+    
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    color: black;
+    border-bottom: 2px solid #4E84C4;
+    border-radius: 2px;
+    background-color: #FFFFFFC2;
+   }
+
+   .nav-tabs .nav-item .nav-link{
+    color:  black;
+    font-size: 10px;
+    font-weight:bold;
+    letter-spacing: 0.4px;
+    border-style: none;
+    
+     
+}
+
+#buttonSubmit{
+float: right;
+margin: 20px;
+color: white;
+background-color: black;
+width: 100px;
+border: none;
+outline: none;
+  &:hover{
+    background-color: #7F7F7F;
+  }
+ }
+
+ .tabs-section{
+    display: flex;
+    flex-direction: column;
+ }
+
+
+
+
+

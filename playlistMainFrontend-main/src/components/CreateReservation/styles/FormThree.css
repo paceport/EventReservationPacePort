@@ -1,0 +1,55 @@
+.FoodService {
+  margin-top: 1rem;
+}
+
+.event-logistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 94%;
+  margin-left: 2rem;
+}
+.pop-up-title {
+  letter-spacing: 0.58px;
+  color: #a26c14;
+  opacity: 1;
+  font-size: 0.9rem;
+  align-self: center;
+  margin-left: 2rem;
+}
+
+.pop-up-section {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+
+  background: #fef9db 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  opacity: 1;
+}
+.PopUp-Section {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+
+  background: #fef9db 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  opacity: 1;
+  margin: 1.5rem;
+}
+
+.pop-up-textArea {
+  width: 90%;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ffa500;
+  border-radius: 4px;
+  background-color: #fff;
+  resize: vertical;
+  margin: 1.5rem;
+}
+
+.pop-up-textArea::placeholder {
+  color: #808080; /* Placeholder text color set to a neutral gray */
+}

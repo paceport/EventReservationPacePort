@@ -1,0 +1,38 @@
+form {  
+    display: flex;  
+    flex-direction: column;  
+    max-width: 400px;  
+    margin: auto;  
+  }  
+    
+  div {  
+    margin-bottom: 15px;  
+  }  
+    
+  label {  
+    display: block;  
+    margin-bottom: 5px;  
+  }  
+    
+  input,  
+  button {  
+    padding: 8px;  
+    font-size: 16px;  
+  }  
+    
+  button {  
+    margin-right: 10px;  
+  }  
+    
+  button[type='submit'] {  
+    background-color: orange;  
+    color: white;  
+    border: none;  
+  }  
+    
+  button[type='button'] {  
+    background-color: red;  
+    color: white;  
+    border: none;  
+  }  
+  

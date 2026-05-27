@@ -1,0 +1,25 @@
+.buttons-row {
+  display: flex;
+  gap: 10px;
+  font-size: 0.8rem;
+  margin-left: 1.5rem;
+}
+
+.category-button {
+  background-color: #dcdcdc;
+  border-radius: 22px;
+  padding: 4px 16px;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bolder;
+}
+
+.category-button.selected {
+  background-color: black;
+  color: #6db657;
+}
+
+.category-button:hover {
+  background-color: black;
+}

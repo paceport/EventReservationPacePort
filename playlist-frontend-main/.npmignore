@@ -1,0 +1,5 @@
+# Exclude files and directories not needed for deployment
+tests/
+docs/
+.git/
+.vscode/

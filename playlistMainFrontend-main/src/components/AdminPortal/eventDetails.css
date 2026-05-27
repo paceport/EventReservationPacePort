@@ -1,0 +1,78 @@
+.event-details {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.event-details h1 {
+  text-align: center;
+  color: #ff6f61; /* Darker orange from the image */
+  margin-bottom: 20px;
+}
+
+.event-field {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.event-field label {
+  font-weight: bold;
+  width: 150px;
+  color: #333333;
+}
+
+.event-field span,
+.event-field ul {
+  flex: 1;
+  padding: 8px 12px;
+  background-color: #e6e6e6; /* Light grey background */
+  border-radius: 4px;
+  color: #333333;
+}
+
+.event-field ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+ul li {
+  list-style-type: none;
+  line-height: 1.5;
+}
+
+/* Additional styles for buttons or other interactive elements */
+.button {
+  padding: 8px 15px;
+  background-color: #57a773; /* Green from the image */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #458b65; /* Darker green for hover state */
+}
+.back-button-event {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  width: 50px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  color: black;
+
+  &:hover {
+    background-color: white;
+  }
+}

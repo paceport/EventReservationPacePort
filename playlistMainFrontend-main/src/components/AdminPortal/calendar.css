@@ -1,0 +1,245 @@
+/* Header */
+.rbc-toolbar {
+  background-color: #f7f7f7 !important;
+  margin-bottom: 10px !important;
+  height: 100px !important;
+  padding: 10px 0 !important;
+  border-radius: 10px !important;
+  color: black !important;
+  display: flex !important;
+
+  justify-content: space-between !important;
+}
+.rbc-header {
+  background-color: white !important;
+  color: #4e84c4 !important;
+  height: 50px !important;
+  font-size: 18px !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.rbc-allday-cell {
+  display: none !important;
+}
+
+.rbc-month-row {
+  display: inline-table !important;
+  flex: 0 0 0 !important;
+  min-height: 50px !important;
+  height: 100% !important;
+}
+
+.rbc-time-header-cell .rbc-today {
+  background: #4e84c4 !important;
+  color: white !important;
+}
+
+.rbc-time-slot:not(.rbc-today .rbc-time-slot) {
+  background-color: white !important;
+}
+
+/* Selected date and view buttons */
+.rbc-btn-group-1 button {
+  background-color: #d9d9d9 !important;
+  border-radius: 30px !important;
+  padding: 5px 10px !important;
+  width: 30px !important;
+  height: 30px !important;
+  font-weight: bold !important;
+}
+
+.rbc-btn-group-2 button {
+  background-color: #d9d9d9 !important;
+  border-radius: 20px !important;
+  padding: 5px 10px !important;
+  margin-left: 8px !important;
+  width: 70px !important;
+  height: 30px !important;
+  outline: none !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  letter-spacing: 0.53px !important;
+}
+.rbc-toolbar-label {
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 0.53px !important;
+  align-self: center;
+  margin: 10px;
+}
+
+.rbc-btn-group-1 button:active,
+.rbc-btn-group-1 button.rbc-active {
+  background-color: black !important;
+  color: rgb(0, 128, 0) !important;
+  font-weight: bold !important;
+}
+
+.rbc-btn-group-2 button:active,
+.rbc-btn-group-2 button.rbc-active {
+  background-color: black !important;
+  color: rgb(0, 128, 0) !important;
+  font-weight: bold !important;
+}
+
+/* Month view day */
+.rbc-month-view .rbc-day-bg {
+  border: 1px solid #e6e6e6 !important;
+}
+
+/* Date cell */
+.rbc-date-cell {
+  height: fit-content !important;
+  width: fit-content !important;
+}
+.rbc-current-month {
+  font-size: 16px; /* Example size, adjust as needed */
+  margin-right: 20px; /* Space before the previous button */
+  font-weight: bold; /* Optional: if you want the month name to stand out */
+}
+
+/* Event styles */
+.rbc-event {
+  background-color: none !important;
+  border-radius: 0px !important;
+  padding: 2px 2px !important;
+  color: white !important;
+  z-index: 1 !important;
+  justify-content: space-between !important;
+}
+
+/* Time slot interval lines */
+.rbc-event,
+.rbc-day-slot .rbc-background-event {
+  background-color: white !important;
+  z-index: 1 !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.rbc-timeslot-group {
+  border-top: 1px solid #e6e6e6 !important;
+}
+
+/* Current time indicator */
+.rbc-current-time-indicator {
+  background-color: #ff0000 !important;
+  height: 2px !important;
+}
+
+/* Event type specific backgrounds */
+
+/* Event styles */
+.event {
+  display: block !important;
+  width: 100% !important; /* Take full width */
+  height: 100% !important; /* Take full height */
+  overflow: hidden !important; /* Hide overflow */
+  border-radius: 4px !important; /* Rounded corners */
+  padding: 5px !important; /* Padding inside the event */
+  z-index: 1 !important; /* Ensure it's above other elements */
+}
+
+/* Specific event type backgrounds */
+.event-Tour {
+  background-color: #6db657 !important;
+}
+
+.event-workshop {
+  background-color: #f0b34f !important;
+}
+
+.event-event {
+  background-color: #df653a !important;
+}
+
+.event-meeting {
+  background-color: #e41165 !important;
+}
+
+.event-category,
+.event-title,
+.event-time,
+.event-user-name {
+  white-space: wrap !important;
+  overflow: hidden !important;
+}
+
+/* Adjust the height of the time slot in day and week views */
+.rbc-time-content > * + * > * {
+  height: 100%;
+  z-index: 1 !important;
+  width: 100% !important;
+}
+
+/* .rbc-time-slot {
+  height: 200px !important;
+  z-index: 1 !important;
+  width: 100% !important;
+} */
+
+.rbc-time-content > .rbc-day-view .rbc-time-slot,
+.rbc-time-content > .rbc-week-view .rbc-time-slot {
+  min-height: fit-content !important; /* Fit to content */
+  width: 100px !important; /* Fixed width */
+  height: auto !important; /* Allow height to grow as needed */
+}
+
+.event-category {
+  font-weight: bold !important;
+  font-size: 0.8rem !important;
+  padding: 2px !important;
+  letter-spacing: 0.56px !important;
+}
+
+.event-title {
+  font-size: 0.6rem !important;
+  padding: 2px !important;
+  letter-spacing: 0.56px !important;
+  font-weight: bold !important;
+}
+
+.event-time {
+  font-size: 0.6em !important;
+  padding: 2px !important;
+  letter-spacing: 0.56px !important;
+  font-weight: bold !important;
+}
+
+.rbc-day-slot .rbc-event-label {
+  display: none !important;
+}
+
+.event-user-name {
+  font-size: 0.8em !important;
+  text-align: right !important;
+  margin-top: 5px !important;
+  padding: 2px !important;
+  letter-spacing: 0.56px !important;
+  font-weight: bold !important;
+}
+
+.rbc-day-slot .rbc-event {
+  border: none !important;
+}
+
+.rbc-day-slot .rbc-event,
+.rbc-event-content,
+.rbc-show-more {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.rbc-btn-group-1 button:active,
+.rbc-btn-group-1 button.rbc-active {
+  background-color: black !important;
+  color: green !important;
+}
+
+/* Active state for view buttons (day, week, month, agenda) */
+.rbc-btn-group-2 button:active,
+.rbc-btn-group-2 button.rbc-active {
+  background-color: black !important;
+  color: green !important;
+}
