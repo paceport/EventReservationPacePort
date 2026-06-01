@@ -9,7 +9,7 @@ import { FormProvider } from '../src/Components/FormContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   < BrowserRouter>
+   < BrowserRouter basename="/admin">
    <FormProvider>
     <App />
     </FormProvider>

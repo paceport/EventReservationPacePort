@@ -21,7 +21,7 @@ const ReservationsHeader = () => {
     try {
       const jwtToken = localStorage.getItem("accessToken");
       const response = await fetch(
-        `http://localhost:4000/api/user/current/${currentEmpId}`,
+        `http://52.22.173.61/api/api/user/current/${currentEmpId}`,
         {
           headers: new Headers({
             Authorization: jwtToken,
@@ -48,7 +48,7 @@ const ReservationsHeader = () => {
     try {
       const jwtToken = localStorage.getItem("accessToken");
       const response = await fetch(
-        "http://localhost:4000/api/event/all",
+        "http://52.22.173.61/api/api/event/all",
         {
           headers: new Headers({
             Authorization: jwtToken,

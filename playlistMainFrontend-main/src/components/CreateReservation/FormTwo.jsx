@@ -66,7 +66,7 @@
 //     const fetchData = async () => {
 //       try {
 //         const response = await fetch(
-//           "http://localhost:5001/",
+//           "http://52.22.173.61/session/",
 //           {
 //             headers: {
 //               "x-api-key": "7c1d3281-a9a3-41a6-a7d3-c081a8d5882a",
@@ -248,7 +248,7 @@ import PlaylistCard from "./components/PlaylistCard.jsx";
 import "./styles/FormTwo.css";
 import likeIcon from "../../images/Like.svg";
 
-const V1_API_URL = "http://localhost:5001";
+const V1_API_URL = "http://52.22.173.61/session";
 const V1_API_KEY = "local-dev-key-123";
 
 export default function FormTwo({

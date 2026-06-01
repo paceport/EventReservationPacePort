@@ -56,7 +56,7 @@
 
 //     try {
 //       const response = await fetch(
-//         `http://localhost:4000/${
+//         `http://52.22.173.61/api/${
 //           isSignUp
 //             ? "api/auth/new/verify"
 //             : "api/auth/password/reset/verify-otp"
@@ -102,7 +102,7 @@
 
 //     try {
 //       const response = await fetch(
-//         `http://localhost:4000/${
+//         `http://52.22.173.61/api/${
 //           isSignUp ? "api/auth/otp/resend" : "api/auth/password/reset/request"
 //         }`,
 //         requestOptions
@@ -277,7 +277,7 @@ import login_image from "../../images/Mask Group 1.png";
 import register_image from "../../images/Rectangle 101.png";
 import Spinner from "react-bootstrap/Spinner";
 
-const API_BASE_URL = "http://localhost:4000";
+const API_BASE_URL = "http://52.22.173.61/api";
 
 const OTPInput = () => {
   const [isLoading, setIsLoading] = useState(false);

@@ -59,7 +59,7 @@ function MainForm({ setIsLoading }) {
     // Append the JSON part of the data to the FormData object
     dataForm.append("json", JSON.stringify(jsonFormData));
 
-    const apiUrl = process.env.REACT_APP_API_URL;
+    const apiUrl = `${process.env.REACT_APP_API_URL}/submit/new`;
     const apiKey = process.env.REACT_APP_API_KEY;
 
     fetch(apiUrl, {  

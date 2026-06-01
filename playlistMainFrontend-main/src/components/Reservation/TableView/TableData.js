@@ -116,7 +116,7 @@ const onApprove = async (event) => {
   };
   try {
     const response = await fetch(
-      "http://localhost:4000/api/event/sendEventDetails",
+      "http://52.22.173.61/api/api/event/sendEventDetails",
       requestOptions
     );
     if (response.ok) {
@@ -147,7 +147,7 @@ const onReject = async (row) => {
   };
   try {
     const response = await fetch(
-      "http://localhost:4000/api/event/sendRejectionDetails",
+      "http://52.22.173.61/api/api/event/sendRejectionDetails",
       requestOptions
     );
     if (response.ok) {

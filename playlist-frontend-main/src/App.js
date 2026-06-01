@@ -1,4 +1,4 @@
-import { Routes, Route, Outlet } from "react-router-dom" ;
+import { Routes, Route, Outlet } from "react-router-dom";
 
 import './App.css';
 import MainFile from './Components/MainFile';
@@ -9,25 +9,23 @@ import DetailedCardOverview from './Components/DetailedCardOverview'
 
 function App() {
   return (
-
-<Routes>
-    <Route path = '/' element = {<RootPage/>}>
-      <Route index element= { <MainFile/>} /> 
-      <Route path="/onsubmit" element = {<OnSubmit/>}/>
-      <Route path="/tocard" element = {<CardOverview/>}/>
-      <Route path="/topage" element= {<DetailedCardOverview/>}/>
-     </Route>
-</Routes>
-
+    <Routes>
+      <Route path="/" element={<RootPage />}>
+        <Route index element={<MainFile />} />
+        <Route path="onsubmit" element={<OnSubmit />} />
+        <Route path="tocard" element={<CardOverview />} />
+        <Route path="topage" element={<DetailedCardOverview />} />
+      </Route>
+    </Routes>
   );
 }
 
-function RootPage(){
-  return(
-      <div className='main'>
-       <Header/>
-       <Outlet/>  
-       </div>
+function RootPage() {
+  return (
+    <div className='main'>
+      <Header />
+      <Outlet />
+    </div>
   );
 }
 

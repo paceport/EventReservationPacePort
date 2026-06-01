@@ -60,7 +60,7 @@ services:
     container_name: playlist-session-frontend
     restart: unless-stopped
     ports:
-      - "3001:3001"
+      - "3001:80"
     env_file:
       - ./playlist-frontend-main/.env
     depends_on:

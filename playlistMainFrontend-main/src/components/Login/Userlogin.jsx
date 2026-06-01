@@ -30,7 +30,7 @@ export default function Userlogin({ setIsLoading }) {
       };
       try {
         const response = await fetch(
-          "http://localhost:4000/api/auth/login",
+          "http://52.22.173.61/api/api/auth/login",
           requestOptions
         );
 

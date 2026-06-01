@@ -29,7 +29,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/api/auth/password/reset/request",
+        "http://52.22.173.61/api/api/auth/password/reset/request",
         requestOptions
       );
       if (response.status === 201) {

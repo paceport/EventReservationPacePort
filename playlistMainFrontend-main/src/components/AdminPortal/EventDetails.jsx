@@ -12,7 +12,7 @@ function EventDetails() {
     if (eventID) {
       const jwtToken = localStorage.getItem("accessToken");
 
-      const url = `http://localhost:4000/api/event/${eventID}`;
+      const url = `http://52.22.173.61/api/api/event/${eventID}`;
 
       fetch(url, {
         headers: new Headers({

@@ -135,7 +135,7 @@
 //     try {
 //       const jwtToken = localStorage.getItem("accessToken");
 //       const response = await fetch(
-//         `http://localhost:4000/api/event/update/${id}`,
+//         `http://52.22.173.61/api/api/event/update/${id}`,
 //         {
 //           method: "PUT",
 //           headers: {
@@ -166,7 +166,7 @@
 //     try {
 //       const jwtToken = localStorage.getItem("accessToken");
 //       const response = await fetch(
-//         "http://localhost:4000/api/event/new",
+//         "http://52.22.173.61/api/api/event/new",
 //         {
 //           method: "POST",
 //           headers: {
@@ -418,7 +418,7 @@ function CreateReservation() {
     try {
       const jwtToken = localStorage.getItem("accessToken");
 
-      const response = await fetch(`http://localhost:4000/api/event/${id}`, {
+      const response = await fetch(`http://52.22.173.61/api/api/event/${id}`, {
         method: "PUT",
         headers: {
           Authorization: jwtToken,
@@ -447,7 +447,7 @@ function CreateReservation() {
     try {
       const jwtToken = localStorage.getItem("accessToken");
 
-      const response = await fetch("http://localhost:4000/api/event/new", {
+      const response = await fetch("http://52.22.173.61/api/api/event/new", {
         method: "POST",
         headers: {
           Authorization: jwtToken,
