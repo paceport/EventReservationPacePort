@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./signup.css";
+import { API_BASE_URL } from "../../config/apiConfig";
 
 function SignUp({ setIsLoading }) {
   let navigate = useNavigate();
@@ -52,7 +53,7 @@ function SignUp({ setIsLoading }) {
 
     try {
       const response = await fetch(
-        "http://52.22.173.61/api/api/auth/signup",
+        `${API_BASE_URL}/api/auth/signup`,
         requestOptions
       );
 
@@ -151,5 +152,3 @@ function SignUp({ setIsLoading }) {
 }
 
 export default SignUp;
-
-

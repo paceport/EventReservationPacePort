@@ -9,7 +9,7 @@ import workshopIcon from "../../images/Workshop.svg";
 import EventCalendar from "./Calendar.jsx";
 import { Coloums2 } from "../Reservation/TableView/TableData.js";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-
+import { API_BASE_URL } from "../../config/apiConfig";
 const ReservationsHeader = () => {
   const [checked, setChecked] = useState(false);
   const [data, setData] = useState([]);
@@ -21,7 +21,7 @@ const ReservationsHeader = () => {
     try {
       const jwtToken = localStorage.getItem("accessToken");
       const response = await fetch(
-        `http://52.22.173.61/api/api/user/current/${currentEmpId}`,
+        `${API_BASE_URL}/api/user/current/${currentEmpId}`,
         {
           headers: new Headers({
             Authorization: jwtToken,
@@ -48,7 +48,7 @@ const ReservationsHeader = () => {
     try {
       const jwtToken = localStorage.getItem("accessToken");
       const response = await fetch(
-        "http://52.22.173.61/api/api/event/all",
+        `${API_BASE_URL}/api/event/all`,
         {
           headers: new Headers({
             Authorization: jwtToken,

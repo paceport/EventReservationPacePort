@@ -8,6 +8,8 @@ import "./styles/FormThree.css";
 import Divider from "@mui/material/Divider";
 import { useNavigate } from "react-router-dom";
 import alertIcon from "../../images/Announcement.png";
+import { API_BASE_URL } from "../../config/apiConfig";
+
 
 export default function FormThree({
   setFormThreeData,
@@ -33,7 +35,7 @@ export default function FormThree({
         const jwtToken = localStorage.getItem("accessToken");
 
         const response = await fetch(
-          `http://52.22.173.61/api/api/event/getLogistics/${id}`,
+          `${API_BASE_URL}/api/event/getLogistics/${id}`,
           {
             headers: new Headers({
               Authorization: jwtToken,

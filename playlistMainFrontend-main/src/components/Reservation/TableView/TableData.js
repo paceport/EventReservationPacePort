@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
-
+import { API_BASE_URL } from "../../../config/apiConfig";
 const ActionCell = ({ row, onApprove, onReject }) => {
   const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -116,7 +116,7 @@ const onApprove = async (event) => {
   };
   try {
     const response = await fetch(
-      "http://52.22.173.61/api/api/event/sendEventDetails",
+      `${API_BASE_URL}/api/event/sendEventDetails`,
       requestOptions
     );
     if (response.ok) {
@@ -147,7 +147,7 @@ const onReject = async (row) => {
   };
   try {
     const response = await fetch(
-      "http://52.22.173.61/api/api/event/sendRejectionDetails",
+      `${API_BASE_URL}/api/event/sendRejectionDetails`,
       requestOptions
     );
     if (response.ok) {

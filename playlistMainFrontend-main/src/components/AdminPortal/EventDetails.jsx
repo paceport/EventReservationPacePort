@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./eventDetails.css";
+import { API_BASE_URL } from "../../config/apiConfig";
 
 function EventDetails() {
   const [eventData, setEventData] = useState(null);
@@ -12,7 +13,7 @@ function EventDetails() {
     if (eventID) {
       const jwtToken = localStorage.getItem("accessToken");
 
-      const url = `http://52.22.173.61/api/api/event/${eventID}`;
+      const url = `${API_BASE_URL}/api/event/${eventID}`;
 
       fetch(url, {
         headers: new Headers({

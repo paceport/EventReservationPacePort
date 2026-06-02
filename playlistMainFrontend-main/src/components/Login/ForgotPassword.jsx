@@ -3,58 +3,73 @@ import "./forgotPassword.css";
 import tcs_logo from "../../images/TCS Pace_White.png";
 import { useNavigate } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
+import { API_BASE_URL } from "../../config/apiConfig";
 
 const ForgotPassword = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
+    setError("");
   };
 
   const handleSubmit = async (event) => {
-    setIsLoading(true);
     event.preventDefault();
+    setIsLoading(true);
+    setError("");
 
-    const payload = { email: email };
-    const jsonPayload = JSON.stringify(payload);
-
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: jsonPayload,
-    };
+    const payload = { email };
 
     try {
-      const response = await fetch(
-        "http://52.22.173.61/api/api/auth/password/reset/request",
-        requestOptions
-      );
-      if (response.status === 201) {
-        setIsLoading(false);
-        const jsonResponse = await response.json();
-        const empid = jsonResponse.employee_id;
-        navigate("/otp", {
-          state: { isSignUp: false, email: email, empid: empid },
-        });
-      } else {
-        const jsonResponse = await response.json();
-        throw new Error(jsonResponse.message);
+      const response = await fetch(`${API_BASE_URL}/api/auth/forgot-password`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const responseText = await response.text();
+
+      let jsonResponse = {};
+      try {
+        jsonResponse = responseText ? JSON.parse(responseText) : {};
+      } catch {
+        throw new Error("Invalid response from server");
       }
+
+      if (response.ok) {
+        navigate("/otp", {
+          state: {
+            isSignUp: false,
+            email,
+            empid: jsonResponse.employee_id || jsonResponse.empid || "",
+          },
+        });
+
+        return;
+      }
+
+      throw new Error(jsonResponse.message || "Failed to send OTP");
     } catch (error) {
+      setError(error.message || "Failed to send OTP");
+    } finally {
       setIsLoading(false);
-      setError(error.message);
     }
   };
 
   return (
     <>
       <div className="background-container"></div>
+
       <div className="forget-container">
         <div className="login-left">
           <img src={tcs_logo} alt="TCS_Logo" style={{ padding: 20 }} />
+
           <div className="pace-text">
             <h1 className="pace-h1">Welcome</h1>
             <h1 className="pace-h1"> to Pace Playlist</h1>
@@ -63,7 +78,8 @@ const ForgotPassword = () => {
             </h3>
           </div>
         </div>
-        {isLoading ? (
+
+        {isLoading && (
           <div
             style={{
               width: "100%",
@@ -90,20 +106,19 @@ const ForgotPassword = () => {
               />
               <span className="spinner-span">Please wait...</span>
             </button>
-
-            {/* <span style={{ color: "white" }}>Uploading,</span> */}
           </div>
-        ) : (
-          ""
         )}
 
         <div className="forgot-password-container">
           <h3 className="forget-title">Forgot Password</h3>
+
           <span className="forget-text">
             Enter your TCS email address associated with your account
           </span>
+
           <form className="forgot-password-form" onSubmit={handleSubmit}>
             <label htmlFor="email">TCS Email Address</label>
+
             <input
               type="email"
               id="email"
@@ -111,7 +126,9 @@ const ForgotPassword = () => {
               onChange={handleEmailChange}
               required
             />
+
             {error && <div className="forget-error">{error}</div>}
+
             <div
               style={{
                 display: "flex",
@@ -122,13 +139,17 @@ const ForgotPassword = () => {
             >
               <button
                 className="forget-back"
+                type="button"
                 onClick={() => {
                   navigate("/");
                 }}
               >
                 Back
               </button>
-              <button className="forgot-button">Proceed</button>
+
+              <button className="forgot-button" type="submit" disabled={isLoading}>
+                Proceed
+              </button>
             </div>
           </form>
         </div>
@@ -138,5 +159,3 @@ const ForgotPassword = () => {
 };
 
 export default ForgotPassword;
-
-

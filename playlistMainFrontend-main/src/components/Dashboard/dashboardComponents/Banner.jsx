@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import "../dashboardStyles/List.css";
 import plusIcon from "../../../images/addSign.png";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../../../config/apiConfig";
 
 export default function Banner() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ export default function Banner() {
     try {
       const jwtToken = localStorage.getItem("accessToken");
       const response = await fetch(
-        "http://52.22.173.61/api/api/event/all",
+        `${API_BASE_URL}/api/event/all`,
         {
           headers: new Headers({
             Authorization: jwtToken,

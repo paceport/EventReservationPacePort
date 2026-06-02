@@ -7,38 +7,84 @@ import {
   ItemName,
 } from "./SidebarStyles";
 import { dummyData } from "..";
+import { API_BASE_URL } from "../../config/apiConfig";
 
 const SidebarItems = ({ displaySidebar }) => {
   const [activeItem, setActiveItem] = useState(1);
   const [role, setRole] = useState("USER");
 
-  const fetchUserRole = async () => {
-    const currentEmpId = JSON.parse(localStorage.getItem("user")).empid;
+  const getAccessToken = () => {
+    const token = localStorage.getItem("accessToken");
+
+    if (!token) {
+      return null;
+    }
 
     try {
-      const jwtToken = localStorage.getItem("accessToken");
+      return JSON.parse(token);
+    } catch {
+      return token;
+    }
+  };
+
+  const getCurrentUser = () => {
+    const user = localStorage.getItem("user");
+
+    if (!user) {
+      return null;
+    }
+
+    try {
+      return JSON.parse(user);
+    } catch {
+      return null;
+    }
+  };
+
+  const fetchUserRole = async () => {
+    try {
+      const currentUser = getCurrentUser();
+      const jwtToken = getAccessToken();
+
+      if (!currentUser?.empid || !jwtToken) {
+        alert("You are not a valid user. Please login again.");
+        return;
+      }
+
       const response = await fetch(
-        `http://52.22.173.61/api/api/user/current/${currentEmpId}`,
+        `${API_BASE_URL}/api/user/current/${currentUser.empid}`,
         {
-          headers: new Headers({
+          method: "GET",
+          cache: "no-store",
+          headers: {
             Authorization: jwtToken,
-          }),
+          },
         }
       );
+
       if (response.status === 401) {
         alert("You are not a valid user. Please login again.");
-      } else {
-        let newRole = await response.json();
+        return;
+      }
+
+      if (!response.ok) {
+        console.error("Failed to fetch user role. Status:", response.status);
+        return;
+      }
+
+      const newRole = await response.json();
+
+      if (newRole?.role) {
         setRole(newRole.role);
       }
     } catch (error) {
-      console.error(error);
+      console.error("Error fetching user role:", error);
     }
   };
 
   useEffect(() => {
     fetchUserRole();
-  }, [role]);
+  }, []);
 
   return (
     <ItemsList>
@@ -61,6 +107,7 @@ const SidebarItems = ({ displaySidebar }) => {
             </ItemContainer>
           );
         }
+
         return (
           index !== 0 && (
             <ItemContainer
@@ -85,5 +132,3 @@ const SidebarItems = ({ displaySidebar }) => {
 };
 
 export default SidebarItems;
-
-

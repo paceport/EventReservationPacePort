@@ -29,6 +29,7 @@ import HackathonSvg from "../../images/Hackathon.svg";
 import meetingSvg from "../../images/Meeting.svg";
 import walkSvg from "../../images/Walk.svg";
 import eventSvg from "../../images/Events.svg";
+import { API_BASE_URL } from "../../config/apiConfig";
 
 const categories = [
   {
@@ -99,7 +100,7 @@ function Category() {
     try {
       const jwtToken = localStorage.getItem("accessToken");
       const response = await fetch(
-        "http://52.22.173.61/api/api/event/my",
+        `${API_BASE_URL}/api/event/my`,
         {
           headers: new Headers({
             Authorization: jwtToken,

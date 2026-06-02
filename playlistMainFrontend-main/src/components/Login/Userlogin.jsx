@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./login.css";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../Hooks/useAuth";
+import { API_BASE_URL } from "../../config/apiConfig";
 
 export default function Userlogin({ setIsLoading }) {
   const [email, setEmail] = useState("");
@@ -29,10 +30,7 @@ export default function Userlogin({ setIsLoading }) {
         body: jsonPayload,
       };
       try {
-        const response = await fetch(
-          "http://52.22.173.61/api/api/auth/login",
-          requestOptions
-        );
+        const response = await fetch(`${API_BASE_URL}/api/auth/login`, requestOptions);
 
         if (response.status === 200) {
           setIsLoading(false);
