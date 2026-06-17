@@ -53,7 +53,8 @@ function CreateReservation() {
       setData1({
         customers: event.participants || [],
         title: event.title || "User Event",
-        location: event.location || "Event Space",
+        // location: event.location || "Event Space",
+        location: event.location || "",
         type: event.category_type || "Event",
         startDateTime: event.start_datetime,
         endDateTime: event.end_datetime,
@@ -99,7 +100,8 @@ function CreateReservation() {
       start_datetime: toIsoString(info.startDateTime),
       end_datetime: toIsoString(info.endDateTime),
       participants: info.customers || [],
-      location: info.location || "Event Space",
+      // location: info.location || "Event Space",
+      location: info.location,
       food_service: {
         enabled: logistics.foodService || false,
         breakfast: logistics.breakfast || false,
@@ -122,7 +124,12 @@ function CreateReservation() {
 
   function handleDatafromChild3(formThreeData) {
     const backendPayload = buildBackendPayload(formThreeData);
-
+    
+    if (!backendPayload.location) {
+    alert("Please select a location.");
+    setActiveStep(0);
+    return;
+    }
     if (!backendPayload.start_datetime || !backendPayload.end_datetime) {
       console.error("Invalid date payload:", backendPayload);
       setActiveStep(4);

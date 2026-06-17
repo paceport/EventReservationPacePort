@@ -86,3 +86,12 @@
     font-size: 16px;
     text-align: right;
 }
+
+.generated-pass-card {
+  width: 240px;
+  min-height: 260px;
+}
+
+.generated-pass-card svg {
+  max-width: 100%;
+}
